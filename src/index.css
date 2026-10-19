@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --color-sea-950: #06243a;
+  --color-sea-900: #0b3b5c;
+  --color-sea-700: #145d86;
+  --color-sea-500: #2a86b3;
+  --color-sea-100: #dceef7;
+  --color-sea-50: #f1f8fc;
+  --color-reef-500: #2fb3b1;
+  --color-reef-100: #d6f3f2;
+  --color-coral-500: #e07a3f;
+  --color-coral-100: #fbe6d8;
+  --color-sand-50: #fbf8f3;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-sand-50 text-slate-800 font-sans antialiased; }
+  h1, h2, h3 { @apply font-display text-sea-950; }
+  a { @apply text-sea-700; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-coral-500; }
+}
